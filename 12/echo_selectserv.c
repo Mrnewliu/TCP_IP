@@ -40,8 +40,11 @@ int main(int argc,char* argv[])
         exit(-1);
     }
 
-    
-    
+    if(listen(serv_sock, 5) == -1)    
+    {
+        perror("listen");
+        exit(-1);
+    }
 
     
 
